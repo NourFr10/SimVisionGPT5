@@ -41,7 +41,7 @@ Signal* WaveformDatabase::addSignal(const std::string& fullName,
 
     // attach to hierarchy
     HierNode* scopeNode = getOrCreateScopeNode(scopePath);
-    scopeNode->signals.push_back(raw);
+    scopeNode->signalList.push_back(raw);
 
     return raw;
 }
