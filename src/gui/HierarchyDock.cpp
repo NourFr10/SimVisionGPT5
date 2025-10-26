@@ -43,7 +43,7 @@ void HierarchyDock::addScopeRecursive(QTreeWidgetItem* parentItem,
                                       const QString& pathPrefix)
 {
     // Add signals in this node
-    for (Signal* sig : node->signals) {
+    for (Signal* sig : node->signalList) {
         auto *sigItem = new QTreeWidgetItem(parentItem);
         sigItem->setText(0, QString::fromStdString(sig->reference));
         sigItem->setData(0, Qt::UserRole + 0, true); // isSignal = true
