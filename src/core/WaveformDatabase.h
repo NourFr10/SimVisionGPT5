@@ -1,3 +1,7 @@
+#ifdef signals
+#undef signals
+#endif
+
 #pragma once
 #include "Signal.h"
 #include <unordered_map>
