@@ -10,11 +10,24 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets OpenGL OpenGLWidgets)
 
 add_executable(SimVisionClone
     src/main.cpp
+
     src/MainWindow.cpp
     src/MainWindow.h
+
     src/WaveformView.cpp
     src/WaveformView.h
+
+    src/core/Signal.h
+    src/core/WaveformDatabase.cpp
+    src/core/WaveformDatabase.h
+    src/core/VCDParser.cpp
+    src/core/VCDParser.h
+
+    src/gui/HierarchyDock.cpp
+    src/gui/HierarchyDock.h
 )
+
+target_include_directories(SimVisionClone PRIVATE src)
 
 target_link_libraries(SimVisionClone PRIVATE
     Qt6::Core
